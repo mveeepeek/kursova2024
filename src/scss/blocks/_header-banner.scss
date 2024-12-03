@@ -1,0 +1,112 @@
+.header {
+  background-image: url(../../img/banner-bg.png);
+  height: 100vh;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    &-left,
+    &-right {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      font-size: 1rem;
+    }
+    .nav-item {
+      color: #cfd2c6;
+      text-decoration: none;
+      font-family: "Roboto", sans-serif;
+      font-size: 16px;
+      transition: 0.15s linear;
+    }
+    .nav-item:hover {
+      color: #515643;
+    }
+
+    .header-logo {
+      color: #cfd2c6;
+      font-family: "Elsie";
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 900;
+    }
+  }
+
+  .banner-text {
+    color: #cfd2c6;
+    font-size: 80px;
+    font-family: "Clash Display", sans-serif;
+    line-height: 1.2;
+    position: absolute;
+    top: 40%;
+  }
+
+  .menu-burger {
+    display: none;
+  }
+
+  @media screen and (max-width: 1140px) {
+    .container {
+      padding: 0 70px;
+    }
+
+    .banner-text {
+      font-size: 64px;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    .container {
+      padding: 0 40px;
+    }
+
+    .banner-text {
+      font-size: 50px;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .nav {
+      justify-content: center;
+      position: relative;
+    }
+    .menu-burger {
+      position: absolute;
+      position: fixed;
+      z-index: 1000;
+      display: block;
+      left: 36px;
+      top: 36px;
+    }
+
+    .banner-text {
+      font-size: 45px;
+    }
+
+    .container {
+      padding: 0 30px;
+    }
+
+    .nav-left,
+    .nav-right {
+      display: none;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .banner-text {
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 564px) {
+    .container {
+      padding: 0;
+    }
+  }
+}

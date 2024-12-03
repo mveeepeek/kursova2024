@@ -1,14 +1,104 @@
 .footer {
-	background-color: rgb(62, 62, 62);
-	padding: 50px 0;
-	font-size: 32px;
-    color: #fff;
+  background-color: #b7bca9;
+  padding: 72px 80px 80px 80px;
+  @media screen and (max-width: 992px) {
+    padding: 72px 20px;
+  }
+  @media screen and (max-width: 768px) {
+    padding: 40px 20px;
+  }
+  &-brand {
+    display: flex;
+    flex-direction: column;
+    gap: 72px;
+    @media screen and (max-width: 768px) {
+      gap: 25px;
+      order: -1;
+    }
+    h1 {
+      text-align: center;
+      color: #36392d;
+      font-family: "Elsie";
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 37px;
+    }
+  }
+  &-social {
+    display: flex;
+    gap: 24px;
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
+  }
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+  &-nav,
+  &-newsletter {
+    padding-top: 8px;
+  }
+  &-nav {
+    display: flex;
+    gap: 40px;
+    @media screen and (max-width: 992px) {
+      gap: 20px;
+    }
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
+    a {
+      color: var(--Main-20, #36392d);
+      font-family: Roboto;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    button {
+      color: var(--Main-20, #36392d);
+      font-family: Roboto;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      display: flex;
+    }
+  }
+  &-newsletter {
+    @media screen and (max-width: 768px) {
+      margin: 0 auto;
+    }
+    input {
+      display: flex;
+      width: 199px;
+      padding: 16px;
+      align-items: flex-start;
+      border-bottom: 1px solid #000;
+      &:focus {
+        border-bottom: 1px solid #81831c;
+      }
+    }
+  }
+}
 
-	h1 {
-		font-size: 32px;
-	}
+.footer-nav a:hover {
+  text-decoration: underline;
+}
 
-	@media (max-width: 1200px) {
-		font-size: 26px;
-	}
+.footer-social a img {
+  width: 40px;
+  height: 40px;
+}
+
+.email {
+  font-size: 18px;
+  color: #36392d;
 }

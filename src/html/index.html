@@ -1,15 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Стартовый шаблон</title>
-		<link rel="stylesheet" href="./css/main.css" />
-	</head>
-	<body>
-		@@include('blocks/header.html')
-		@@include('blocks/footer.html')
-		<script src="./js/index.bundle.js"></script>
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arizonia&family=Elsie:wght@400;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Cibo Gustoso Website</title>
+  </head>
+  <body>
+    @@include('./blocks/header-banner.html') @@include('./blocks/about.html')
+    @@include('./blocks/menu.html') @@include('./blocks/our-team.html')
+    @@include('./blocks/events.html') @@include('./blocks/footer.html')
+    @@include('./blocks/stick-menu.html') @@include('./blocks/modal.html')
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "wP3J-mqLKbm2CLMmA",
+        });
+      })();
+    </script>
+    <script src="./js/index.bundle.js"></script>
+  </body>
 </html>

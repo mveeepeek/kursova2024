@@ -1,39 +1,751 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Стартовый шаблон</title>
-		<link rel="stylesheet" href="./css/main.css" />
-	</head>
-	<body>
-		<header class="header">
-    <div class="container">
-        <div class="header__row">
-            <div class="logo">Logo</div>
-            <button class="mobile-nav-btn">
-                <div class="nav-icon"></div>
-            </button>
-        </div>
-    </div>
-</header>
-<div class="mobile-nav">
-	<ul class="mobile-nav__list">
-		<li><a href="#" class="active">Home</a></li>
-		<li><a href="#!">Services</a></li>
-		<li><a href="#!">About</a></li>
-		<li><a href="#!">Projects</a></li>
-		<li><a href="#!">Contact</a></li>
-	</ul>
-</div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arizonia&family=Elsie:wght@400;900&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=clash-display@700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="
+https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js
+"></script>
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Cibo Gustoso Website</title>
+  </head>
+  <body>
+    <header class="header">
+  <div class="container">
+    <nav class="nav">
+      <div class="menu-burger">
+        <button type="button">
+          <img src="../../img/icons/burger.svg" alt="Menu" />
+        </button>
+      </div>
+      <div class="nav-left">
+        <a class="nav-item" href="#menu">Menu</a>
+        <a class="nav-item" href="#team">Team</a>
+      </div>
 
-		<footer class="footer">
-	<div class="container">
-		<h2>Footer</h2>
-	</div>
+      <h1 class="header-logo">Cibo Gustoso</h1>
+
+      <div class="nav-right">
+        <a class="nav-item" href="#event">Events</a>
+        <button class="nav-item" type="button" id="open-modal">Contact</button>
+      </div>
+    </nav>
+
+    <h2 class="banner-text">
+      Made by Italians. Enjoyed<br />
+      by Everyone.
+    </h2>
+  </div>
+</header>
+ <section class="about">
+  <div class="container">
+    <div class="about-overview">
+      <h3>Who we are?</h3>
+      <p>
+        Vulputate in elit tincidunt elit scelerisque massa fusce pharetra.<br />
+        Sagittis gravida lacus quisque dictum non pretium suspendisse
+        porttitor.<br />
+        Risus adipiscing semper ornare velit. Sagittis consequat luctus leo<br />
+        arcu. Aenean nunc accumsan id maecenas. Tortor urna cum platea vitae.
+      </p>
+    </div>
+  </div>
+
+  <div
+    class="splide"
+    role="group"
+    id="about-slider"
+    aria-label="Splide Basic HTML Example"
+  >
+    <div class="splide__arrows">
+      <button class="splide__arrow splide__arrow--prev">
+        <img src="../../img/icons/arrow-left.svg" alt="Left arrow" />
+      </button>
+      <button class="splide__arrow splide__arrow--next">
+        <img src="../../img/icons/arrow-right.svg" alt="Left arrow" />
+      </button>
+    </div>
+
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <img
+            src="../../img/about/about-img-1.jpg"
+            alt="Restaurant Interior"
+          />
+        </li>
+        <li class="splide__slide">
+          <img src="../../img/about/about-img-2.jpg" alt="Wood-fired Pizza" />
+        </li>
+        <li class="splide__slide">
+          <img src="../../img/about/about-img-3.jpg" alt="Wood-fired Pizza" />
+        </li>
+        <li class="splide__slide">
+          <img src="../../img/about/about-img-4.jpg" alt="Wood-fired Pizza" />
+        </li>
+        <li class="splide__slide">
+          <img
+            src="../../img/about/about-img-1.jpg"
+            alt="Restaurant Interior"
+          />
+        </li>
+        <li class="splide__slide">
+          <img src="../../img/about/about-img-2.jpg" alt="Wood-fired Pizza" />
+        </li>
+        <li class="splide__slide">
+          <img src="../../img/about/about-img-3.jpg" alt="Wood-fired Pizza" />
+        </li>
+        <li class="splide__slide">
+          <img src="../../img/about/about-img-4.jpg" alt="Wood-fired Pizza" />
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+    <section class="menu" id="menu">
+  <div class="container">
+    <div class="menu-section">
+      <div class="menu-title">Menu</div>
+      <p class="menu-description">
+        Lacus lobortis nullam nam consectetur fermentum mattis pellentesque id
+        nulla. Risus convallis iaculis risus ac aliquam sit ultricies.
+        Adipiscing adipiscing pellentesque tincidunt vitae. Aliquam dolor
+        egestas nam congue elit dolor.
+      </p>
+
+      <div class="menu-categories">
+        <button class="category-btn" data-category="all">All</button>
+        <button class="category-btn" data-category="pasta">Pasta</button>
+        <button class="category-btn" data-category="pizza">Pizza</button>
+        <button class="category-btn" data-category="salad">Salads</button>
+        <button class="category-btn" data-category="soup">Soups</button>
+        <button class="category-btn" data-category="dessert">Desserts</button>
+      </div>
+
+      <div
+        class="splide slider-container"
+        role="group"
+        id="menu-slider"
+        aria-label="Splide Basic HTML Example"
+      >
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <img src="../../img/icons/arrow-left.svg" alt="Left arrow" />
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <img src="../../img/icons/arrow-right.svg" alt="Left arrow" />
+          </button>
+        </div>
+
+        <div class="splide__track slider-wrapper">
+          <ul class="splide__list">
+            <li class="splide__slide menu-item" data-category="pasta">
+              <img
+                src="../../img/menu/menu-img-1.jpg"
+                alt="Gnocchi with almonds"
+              />
+              <h3>Gnocchi with almonds</h3>
+              <p>$10</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="pasta">
+              <img
+                src="../../img/menu/menu-img-2.jpg"
+                alt="Mini spinach ravioli"
+              />
+              <h3>Mini spinach ravioli</h3>
+              <p>$12</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="pasta">
+              <img src="../../img/menu/menu-img-3.jpg" alt="Lasagna" />
+              <h3>Lasagna</h3>
+              <p>$8</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="pasta">
+              <img
+                src="../../img/menu/menu-img-4.jpg"
+                alt="Carbonara spaghetti"
+              />
+              <h3>Carbonara spaghetti</h3>
+              <p>$15</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="pizza">
+              <img
+                src="../../img/menu/menu-img-5.webp"
+                alt="Gnocchi with almonds"
+              />
+              <h3>Gnocchi with almonds</h3>
+              <p>$10</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="pizza">
+              <img
+                src="../../img/menu/menu-img-6.webp"
+                alt="Mini spinach ravioli"
+              />
+              <h3>Mini spinach ravioli</h3>
+              <p>$12</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="pizza">
+              <img src="../../img/menu/menu-img-7.webp" alt="Lasagna" />
+              <h3>Lasagna</h3>
+              <p>$8</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="pizza">
+              <img
+                src="../../img/menu/menu-img-8.webp"
+                alt="Carbonara spaghetti"
+              />
+              <h3>Carbonara spaghetti</h3>
+              <p>$15</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="salad">
+              <img
+                src="../../img/menu/menu-img-9.webp"
+                alt="Gnocchi with almonds"
+              />
+              <h3>Gnocchi with almonds</h3>
+              <p>$10</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="salad">
+              <img
+                src="../../img/menu/menu-img-10.webp"
+                alt="Mini spinach ravioli"
+              />
+              <h3>Mini spinach ravioli</h3>
+              <p>$12</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="salad">
+              <img src="../../img/menu/menu-img-11.webp" alt="Lasagna" />
+              <h3>Lasagna</h3>
+              <p>$8</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="salad">
+              <img
+                src="../../img/menu/menu-img-12.webp"
+                alt="Carbonara spaghetti"
+              />
+              <h3>Carbonara spaghetti</h3>
+              <p>$15</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="soup">
+              <img
+                src="../../img/menu/menu-img-13.webp"
+                alt="Gnocchi with almonds"
+              />
+              <h3>Gnocchi with almonds</h3>
+              <p>$10</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="soup">
+              <img src="../../img/menu/menu-img-14.webp" alt="Lasagna" />
+              <h3>Lasagna</h3>
+              <p>$8</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="soup">
+              <img
+                src="../../img/menu/menu-img-15.webp"
+                alt="Carbonara spaghetti"
+              />
+              <h3>Carbonara spaghetti</h3>
+              <p>$15</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="dessert">
+              <img
+                src="../../img/menu/menu-img-16.webp"
+                alt="Mini spinach ravioli"
+              />
+              <h3>Mini spinach ravioli</h3>
+              <p>$12</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="dessert">
+              <img src="../../img/menu/menu-img-17.webp" alt="Lasagna" />
+              <h3>Lasagna</h3>
+              <p>$8</p>
+            </li>
+            <li class="splide__slide menu-item" data-category="dessert">
+              <img
+                src="../../img/menu/menu-img-18.webp"
+                alt="Carbonara spaghetti"
+              />
+              <h3>Carbonara spaghetti</h3>
+              <p>$15</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <section class="team" id="team">
+  <div class="container">
+    <div class="team-overview">
+      <h3>Our team</h3>
+      <p>
+        In velit auctor non auctor in. Id pellentesque facilisis at lectus sed
+        in sit <br />
+        tellus mauris.
+      </p>
+    </div>
+
+    <div
+      class="splide"
+      role="group"
+      id="team-slider"
+      aria-label="Splide Basic HTML Example"
+    >
+      <div class="splide__arrows">
+        <button class="splide__arrow splide__arrow--prev">
+          <img src="../../img/icons/arrow-left.svg" alt="Left arrow" />
+        </button>
+        <button class="splide__arrow splide__arrow--next">
+          <img src="../../img/icons/arrow-right.svg" alt="Left arrow" />
+        </button>
+      </div>
+
+      <div class="splide__track slider-wrapper">
+        <ul class="splide__list">
+          <li class="splide__slide team-item" data-category="pasta">
+            <img
+              src="../../img/team/team-img-1.jpg"
+              alt="Gnocchi with almonds"
+            />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="pasta">
+            <img
+              src="../../img/team/team-img-2.jpg"
+              alt="Mini spinach ravioli"
+            />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="pasta">
+            <img src="../../img/team/team-img-3.jpg" alt="Lasagna" />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="pasta">
+            <img
+              src="../../img/team/team-img-4.jpg"
+              alt="Carbonara spaghetti"
+            />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="pizza">
+            <img
+              src="../../img/team/team-img-1.jpg"
+              alt="Gnocchi with almonds"
+            />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="pizza">
+            <img
+              src="../../img/team/team-img-2.jpg"
+              alt="Mini spinach ravioli"
+            />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="pizza">
+            <img src="../../img/team/team-img-3.jpg" alt="Lasagna" />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="pizza">
+            <img
+              src="../../img/team/team-img-4.jpg"
+              alt="Carbonara spaghetti"
+            />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="salad">
+            <img
+              src="../../img/team/team-img-1.jpg"
+              alt="Gnocchi with almonds"
+            />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="salad">
+            <img
+              src="../../img/team/team-img-2.jpg"
+              alt="Mini spinach ravioli"
+            />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="salad">
+            <img src="../../img/team/team-img-3.jpg" alt="Lasagna" />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="salad">
+            <img
+              src="../../img/team/team-img-4.jpg"
+              alt="Carbonara spaghetti"
+            />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="soup">
+            <img
+              src="../../img/team/team-img-1.jpg"
+              alt="Gnocchi with almonds"
+            />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide menu-item" data-category="soup">
+            <img src="../../img/team/team-img-2.jpg" alt="Lasagna" />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="soup">
+            <img
+              src="../../img/team/team-img-3.jpg"
+              alt="Carbonara spaghetti"
+            />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="dessert">
+            <img
+              src="../../img/team/team-img-4.jpg"
+              alt="Mini spinach ravioli"
+            />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="dessert">
+            <img src="../../img/team/team-img-1.jpg" alt="Lasagna" />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+          <li class="splide__slide team-item" data-category="dessert">
+            <img
+              src="../../img/team/team-img-2.jpg"
+              alt="Carbonara spaghetti"
+            />
+            <h3>Johnathan Demario</h3>
+            <p>Founder</p>
+            <p>
+              In velit auctor non auctor in. Id pellentesque facilisis at lectus
+              sed in sit tellus mauris.
+            </p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section class="event" id="event">
+  <div class="container">
+    <div class="event-overview">
+      <h3>Events</h3>
+    </div>
+    <div class="event-container">
+      <div class="event-grid">
+        <div class="event-card">
+          <img src="../../img/events/event-img-1.jpg" alt="Corporate Events" />
+          <div class="event-overlay">
+            <h2 class="event-title">Corporate Events</h2>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img
+            src="../../img/events/event-img-2.jpg"
+            alt="Wedding Celebrations"
+          />
+          <div class="event-overlay">
+            <h2 class="event-title">Wedding Celebrations</h2>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="../../img/events/event-img-3.jpg" alt="Private Parties" />
+          <div class="event-overlay">
+            <h2 class="event-title">Private Parties</h2>
+          </div>
+        </div>
+
+        <div class="event-card">
+          <img src="../../img/events/event-img-4.jpg" alt="Special Occasions" />
+          <div class="event-overlay">
+            <h2 class="event-title">Special Occasions</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <footer class="footer">
+  <div class="footer-container">
+    <div class="footer-nav">
+      <a href="#menu">Menu</a>
+      <a href="#team">Team</a>
+      <a href="#event">Events</a>
+      <button class="nav-item" type="button" id="open-modal-footer">
+        Contact
+      </button>
+    </div>
+
+    <div class="footer-brand">
+      <h1 class="header-logo">Cibo Gustoso</h1>
+
+      <ul class="footer-social">
+        <li>
+          <a href="#">
+            <img src="../../img/icons/facebook.svg" alt="Facebook" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../img/icons/instagram.svg" alt="Instagram" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../img/icons/twitter.svg" alt="Twitter" />
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="../../img/icons/youtube.svg" alt="YouTube" />
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <form class="footer-newsletter">
+      <p class="email">Sign up to our newsletter</p>
+      <input
+        name="email"
+        id="footer"
+        class="footer-input"
+        placeholder="Email"
+      />
+    </form>
+  </div>
 </footer>
 
-		<script src="./js/index.bundle.js"></script>
-	</body>
+    <div class="stick-layout">
+  <div class="stick-overlay"></div>
+  <div class="stick-menu-wrap">
+    <div class="stick-menu">
+      <nav class="stick-menu-list">
+        <nav class="stick-menu-item">
+          <ul>
+            <li>
+              <a href="#menu">Menu</a>
+              <span></span>
+            </li>
+            <li>
+              <a href="#team">Team</a>
+              <span></span>
+            </li>
+            <li>
+              <a href="#event">Events</a>
+              <span></span>
+            </li>
+            <li>
+              <button type="button">Contact</button>
+              <span></span>
+            </li>
+          </ul>
+        </nav>
+      </nav>
+    </div>
+    <div class="cross-btn">
+      <button type="button"></button>
+      <span>
+        <span></span>
+        <span></span>
+      </span>
+    </div>
+  </div>
+</div>
+ <div class="modal hidden">
+  <div class="modal-content">
+    <button type="button" id="btn-close-modal">&times</button>
+    <h3 class="modal-title">Leave your details and we will call you back</h3>
+    <form>
+      <div class="form-row">
+        <label for="name">Name</label>
+        <div class="input-container">
+          <input type="text" name="name" id="name" required />
+          <svg
+            width="12"
+            height="12"
+            viewBox="0 0 12 12"
+            fill="#212121"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6 6C7.6575 6 9 4.6575 9 3C9 1.3425 7.6575 0 6 0C4.3425 0 3 1.3425 3 3C3 4.6575 4.3425 6 6 6ZM6 7.5C3.9975 7.5 0 8.505 0 10.5V11.25C0 11.6625 0.3375 12 0.75 12H11.25C11.6625 12 12 11.6625 12 11.25V10.5C12 8.505 8.0025 7.5 6 7.5Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="phone">Phone number</label>
+        <div class="input-container">
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            pattern="^+380[0-9]{9}$"
+            required
+          />
+          <svg
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+            fill="#212121"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M11.996 9.12268L10.1579 8.91281C9.71644 8.86216 9.28224 9.01413 8.97105 9.32531L7.63948 10.6569C5.59147 9.61479 3.91254 7.94308 2.87044 5.88782L4.20925 4.54901C4.52043 4.23782 4.6724 3.80361 4.62174 3.36217L4.41188 1.53849C4.32504 0.807567 3.70991 0.257568 2.97176 0.257568H1.71979C0.902035 0.257568 0.221776 0.93783 0.272434 1.75559C0.655984 7.93584 5.59871 12.8714 11.7717 13.2549C12.5894 13.3056 13.2697 12.6253 13.2697 11.8075V10.5556C13.2769 9.82465 12.7269 9.20952 11.996 9.12268Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="email">E-mail</label>
+        <div class="input-container">
+          <input type="email" name="email" id="email" required />
+          <svg
+            width="16"
+            height="12"
+            viewBox="0 0 16 12"
+            fill="#212121"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M14 0H2C1.175 0 0.5075 0.675 0.5075 1.5L0.5 10.5C0.5 11.325 1.175 12 2 12H14C14.825 12 15.5 11.325 15.5 10.5V1.5C15.5 0.675 14.825 0 14 0ZM13.7 3.1875L8.3975 6.5025C8.1575 6.6525 7.8425 6.6525 7.6025 6.5025L2.3 3.1875C2.1125 3.0675 2 2.865 2 2.6475C2 2.145 2.5475 1.845 2.975 2.1075L8 5.25L13.025 2.1075C13.4525 1.845 14 2.145 14 2.6475C14 2.865 13.8875 3.0675 13.7 3.1875Z"
+            />
+          </svg>
+        </div>
+      </div>
+      <div class="form-row">
+        <label for="comment">Comment</label>
+        <textarea
+          name="comment"
+          id="comment"
+          placeholder="Введіть текст"
+          rows="6"
+        ></textarea>
+      </div>
+      <div class="form-row_checkbox">
+        <input type="checkbox" name="mailing" id="mailing" required />
+        <label for="mailing"
+          >I agree to the newsletter and accept
+          <a href="#">Terms of the contract</a></label
+        >
+      </div>
+      <button type="submit" class="btn btn-send">Submit</button>
+    </form>
+  </div>
+  <div class="overlay hidden"></div>
+</div>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "wP3J-mqLKbm2CLMmA",
+        });
+      })();
+    </script>
+    <script src="./js/index.bundle.js"></script>
+  </body>
 </html>

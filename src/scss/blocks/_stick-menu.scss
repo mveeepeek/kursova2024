@@ -1,0 +1,98 @@
+.stick-layout {
+  .cross-btn {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    right: 8px;
+    top: 8px;
+    button {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      border: none;
+      background: transparent;
+      cursor: pointer;
+    }
+    span {
+      position: absolute;
+      top: 3px;
+      right: 5px;
+      span {
+        position: absolute;
+        width: 3px;
+        height: 14px;
+        background-color: #bdc3c7;
+        &:nth-child(1) {
+          transform: rotate(45deg);
+        }
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+        }
+      }
+    }
+  }
+  .stick-overlay {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #000000, $alpha: 0.3);
+    transition: 0.3s all ease-in-out;
+    opacity: 0;
+    z-index: -35;
+  }
+  .stick-menu-wrap {
+    position: fixed;
+    z-index: 1100;
+    width: 300px;
+    height: 100%;
+    transform: translateX(-100%);
+    transition: 0.5s all ease-in-out;
+    top: 0;
+    .stick-menu {
+      height: 100%;
+      background-color: #373a47;
+      padding: 2.5em 1.5em 0;
+      font-size: 1.15em;
+      box-sizing: border-box;
+      overflow: auto;
+      &-list {
+        color: #b8b7ad;
+        padding: 0.8em;
+        height: 100%;
+      }
+      &-item {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+        }
+        li {
+          cursor: pointer;
+          overflow: hidden;
+          padding: 8px;
+          a {
+            text-decoration: none;
+            color: #b8b7ad;
+          }
+          button {
+            color: #b8b7ad;
+          }
+          div:nth-child(2) {
+            transform: translate(-100%);
+            transition: all 0.2s ease-in;
+            height: 0.25rem;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 768px) {
+    // display: block;
+  }
+}
